@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSの勉強</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    .container img {
+      width: 100px;
+      height: 100px;
+    }
+
+    #main {
+
+      width: 500px;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    .#main img {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container" id="samune">
+    <!-- <img src="./img/asa_oetsu_eduku.png" alt="">
+    <img src="./img/kasa_golf.png" alt="">
+    <img src="./img/mukiryoku_obasan.png" alt="">
+    <img src="./img/onigiri_nori.png" alt=""> -->
+  </div>
+
+  <div id="main"> 
+    <!-- <img src="" alt=""> -->
+  </div>
+
+  <script>
+    'use strict';
+    {
+      const images = ["./img/asa_oetsu_eduku.png", "./img/kasa_golf.png", "./img/mukiryoku_obasan.png", "./img/oyajigari.png"];
+      images.forEach(image=>{
+        const img=document.createElement('img');
+        img.src=image;
+        document.querySelector('#samune').appendChild(img);
+
+        img.addEventListener('mouseenter',()=>{
+          img2.src=image;
+        });
+        img.addEventListener('mouseleave',()=>{
+          img2.src=photo2[0];
+        });
+      });
+
+      const photo2 = ["./img/onigiri_nori.png"]
+      const img2=document.createElement('img');
+      img2.src=photo2[0];
+      document.getElementById('main').appendChild(img2);
+
+
+    }
+  </script>
+</body>
+
+</html>
